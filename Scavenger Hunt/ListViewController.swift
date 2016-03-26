@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListViewController : UITableViewController {
+class ListViewController : UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     //ListViewController inherits from UITableViewController
     
     let myManager = ItemsManager()
@@ -21,7 +21,41 @@ class ListViewController : UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ListViewCell", forIndexPath: indexPath)
         let item = myManager.itemsList[indexPath.row]
         cell.textLabel?.text = item.name
+        
+        if (item.completed) {
+            cell.imageView?.image = item.photo
+            cell.accessoryType = .Checkmark
+        } else {
+            cell.imageView?.image = nil
+            cell.accessoryType = .None
+        }
+        
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+            let imagePicker = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            imagePicker.sourceType = .Camera
+        } else {
+            imagePicker.sourceType = .PhotoLibrary
+        }
+        
+        imagePicker.delegate = self
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let selectedItem = myManager.itemsList[indexPath.row]
+            let photo = info[UIImagePickerControllerOriginalImage] as! UIImage
+            
+            selectedItem.photo = photo
+            myManager.save()
+            
+            dismissViewControllerAnimated(true, completion: { () -> Void in self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)})
+        }
     }
     
     @IBAction func unwindToList (segue: UIStoryboardSegue) {
