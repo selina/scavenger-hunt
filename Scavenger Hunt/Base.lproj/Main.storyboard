@@ -37,13 +37,18 @@
                                 <action selector="cancel:" destination="BYZ-38-t0r" id="39L-68-6Hs"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="DXG-gT-zOy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="DXG-gT-zOy">
+                            <connections>
+                                <segue destination="spX-q3-PZh" kind="unwind" identifier="DoneItem" unwindAction="unwindToList:" id="zsD-4f-kUO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="textField" destination="Gn7-ql-4U7" id="f53-KM-ifz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="spX-q3-PZh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1117" y="280"/>
         </scene>
@@ -80,7 +85,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="rjQ-k0-2kz">
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="SLs-6v-ikD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SLs-6v-ikD">
                             <connections>
                                 <segue destination="3nX-pO-SEO" kind="presentation" id="A1p-9E-ic0"/>
                             </connections>
