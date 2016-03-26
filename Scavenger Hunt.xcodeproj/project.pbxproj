@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181977451CA6FD2200574A47 /* ScavengerHuntItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181977441CA6FD2200574A47 /* ScavengerHuntItem.swift */; };
 		18318D551CA6CB72006CAECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18318D541CA6CB72006CAECE /* AppDelegate.swift */; };
 		18318D571CA6CB72006CAECE /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18318D561CA6CB72006CAECE /* AddViewController.swift */; };
 		18318D5A1CA6CB72006CAECE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18318D581CA6CB72006CAECE /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181977441CA6FD2200574A47 /* ScavengerHuntItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScavengerHuntItem.swift; sourceTree = "<group>"; };
 		18318D511CA6CB72006CAECE /* Scavenger Hunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scavenger Hunt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18318D541CA6CB72006CAECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18318D561CA6CB72006CAECE /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				18318D541CA6CB72006CAECE /* AppDelegate.swift */,
 				18318D561CA6CB72006CAECE /* AddViewController.swift */,
 				18318D581CA6CB72006CAECE /* Main.storyboard */,
+				181977441CA6FD2200574A47 /* ScavengerHuntItem.swift */,
 				18318D821CA6D94E006CAECE /* ListViewController.swift */,
 				18318D5B1CA6CB72006CAECE /* Assets.xcassets */,
 				18318D5D1CA6CB72006CAECE /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				18318D571CA6CB72006CAECE /* AddViewController.swift in Sources */,
 				18318D551CA6CB72006CAECE /* AppDelegate.swift in Sources */,
+				181977451CA6FD2200574A47 /* ScavengerHuntItem.swift in Sources */,
 				18318D831CA6D94E006CAECE /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +492,7 @@
 				18318D7B1CA6CB72006CAECE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18318D7C1CA6CB72006CAECE /* Build configuration list for PBXNativeTarget "Scavenger HuntTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				18318D7E1CA6CB72006CAECE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18318D7F1CA6CB72006CAECE /* Build configuration list for PBXNativeTarget "Scavenger HuntUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				18318D811CA6CB72006CAECE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
